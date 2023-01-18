@@ -1,14 +1,45 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Addresses</h1>
+<h4>Addresses</h4>
 
-<div id="addresses">
-  <% @addresses.each do |address| %>
-    <%= render address %>
-    <p>
-      <%= link_to "Show this address", address %>
-    </p>
-  <% end %>
-</div>
+<%= link_to "New address", new_address_path, class: "btn btn-primary" %>
 
-<%= link_to "New address", new_address_path %>
+<% if @addresses.any? %>
+  <table id="addresses" class="table">
+    <thead>
+        <th></th>
+        <th>company</th>
+        <th>address1</th>
+        <th>address2</th>
+        <th>city</th>
+        <th>state</th>
+        <th>zip5</th>
+        <th>zip4</th>
+        <th></th>
+    </thead>
+    <% @addresses.each do |address| %>
+      <tr>
+        <td>
+          <%= button_to address, method: :delete, title: "Destroy this address", class: "btn btn-danger" do %>
+            <i class="bi bi-x"></i>
+          <% end %>
+        </td>
+        <td><%= address.company %></td>
+        <td><%= address.address1 %></td>
+        <td><%= address.address2 %></td>
+        <td><%= address.city %></td>
+        <td><%= address.state %></td>
+        <td><%= address.zip5 %></td>
+        <td><%= address.zip4 %></td>
+        <td>
+          <%= link_to address, title: "Show this address",  class: "btn btn-secondary" do %>
+            <i class="bi bi-eye"></i>
+          <% end %>
+          <%= link_to edit_address_path(address), title: "Edit this address", class: "btn btn-secondary" do %>
+            <i class="bi bi-pencil"></i>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+<% end %>

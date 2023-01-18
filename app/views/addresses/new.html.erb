@@ -1,9 +1,10 @@
-<h1>New address</h1>
+<h4>New address</h4>
 
 <%= render "form", address: @address %>
 
 <br>
 
+<hr class="my-4">
 <div>
-  <%= link_to "Back to addresses", addresses_path %>
+  <%= link_to "<< Back to addresses", addresses_path, class: "btn btn-secondary" %>
 </div>

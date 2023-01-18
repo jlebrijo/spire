@@ -13,45 +13,45 @@
   <% end %>
 
   <div>
-    <%= form.label :company, style: "display: block" %>
-    <%= form.text_field :company, readonly: readonly %>
+    <%= form.label :company, style: "display: block", class: "form-label" %>
+    <%= form.text_field :company, readonly: readonly, class: "form-control" %>
   </div>
 
   <div>
     <%= form.label :address1, style: "display: block" %>
-    <%= form.text_field :address1, readonly: readonly %>
+    <%= form.text_field :address1, readonly: readonly, class: "form-control" %>
   </div>
 
   <div>
-    <%= form.label :address2, style: "display: block" %>
-    <%= form.text_field :address2, readonly: readonly %>
+    <%= form.label :address2, style: "display: block", class: "form-label" %>
+    <%= form.text_field :address2, readonly: readonly, class: "form-control" %>
   </div>
 
   <div>
-    <%= form.label :city, style: "display: block" %>
-    <%= form.text_field :city, readonly: readonly %>
+    <%= form.label :city, style: "display: block", class: "form-label" %>
+    <%= form.text_field :city, readonly: readonly, class: "form-control" %>
   </div>
 
   <div>
-    <%= form.label :state, style: "display: block" %>
-    <%= form.text_field :state, readonly: readonly %>
+    <%= form.label :state, style: "display: block", class: "form-label" %>
+    <%= form.text_field :state, readonly: readonly, class: "form-control" %>
   </div>
 
   <div>
-    <%= form.label :zip5, style: "display: block" %>
-    <%= form.text_field :zip5, readonly: readonly %>
+    <%= form.label :zip5, style: "display: block", class: "form-label" %>
+    <%= form.text_field :zip5, readonly: readonly, class: "form-control" %>
   </div>
 
   <div>
-    <%= form.label :zip4, style: "display: block" %>
-    <%= form.text_field :zip4, readonly: readonly %>
+    <%= form.label :zip4, style: "display: block", class: "form-label" %>
+    <%= form.text_field :zip4, readonly: readonly, class: "form-control" %>
   </div>
 
   <div>
     <%= form.hidden_field :standarized %>
   </div>
-
+  <hr class="my-4">
   <div>
-    <%= form.submit "Update#{ ' to Standarized Address' if readonly }" %>
+    <%= form.submit "Update#{ ' to Standarized Address' if readonly }", class: "w-100 btn btn-primary btn-lg" %>
   </div>
 <% end %>
