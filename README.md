@@ -1,24 +1,8 @@
-# README
+# SPIRE TEST
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Technical Requirements
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1. Create a web form to collect a mailing address. XHR and Bootstrap recommended.
+2. Use an address validation API (the USPS provides a free one) to normalize/standardize the submitted form data.
+3. Present the user with a choice to keep their original address as entered, or the standardized version.
+4. Save the selected address into a database.
