@@ -7,7 +7,7 @@
 
 <% unless @address.standarized? %>
   <h2>Standarized Address (USPS Service)</h2>
-  <%= render "form", address: @address.standarize %>
+  <%= render partial: "form", locals: { address: @address.standarize, readonly: true } %>
 <% end %>
 
 <div>

@@ -1,3 +1,4 @@
+<% readonly ||= false %>
 <%= form_with(model: address) do |form| %>
   <% if address.errors.any? %>
     <div style="color: red">
@@ -13,37 +14,37 @@
 
   <div>
     <%= form.label :company, style: "display: block" %>
-    <%= form.text_field :company, readonly: @address.persisted? %>
+    <%= form.text_field :company, readonly: readonly %>
   </div>
 
   <div>
     <%= form.label :address1, style: "display: block" %>
-    <%= form.text_field :address1, readonly: @address.persisted? %>
+    <%= form.text_field :address1, readonly: readonly %>
   </div>
 
   <div>
     <%= form.label :address2, style: "display: block" %>
-    <%= form.text_field :address2, readonly: @address.persisted? %>
+    <%= form.text_field :address2, readonly: readonly %>
   </div>
 
   <div>
     <%= form.label :city, style: "display: block" %>
-    <%= form.text_field :city, readonly: @address.persisted? %>
+    <%= form.text_field :city, readonly: readonly %>
   </div>
 
   <div>
     <%= form.label :state, style: "display: block" %>
-    <%= form.text_field :state, readonly: @address.persisted? %>
+    <%= form.text_field :state, readonly: readonly %>
   </div>
 
   <div>
     <%= form.label :zip5, style: "display: block" %>
-    <%= form.text_field :zip5, readonly: @address.persisted? %>
+    <%= form.text_field :zip5, readonly: readonly %>
   </div>
 
   <div>
     <%= form.label :zip4, style: "display: block" %>
-    <%= form.text_field :zip4, readonly: @address.persisted? %>
+    <%= form.text_field :zip4, readonly: readonly %>
   </div>
 
   <div>
@@ -51,6 +52,6 @@
   </div>
 
   <div>
-    <%= form.submit 'Update to Standarized Address' %>
+    <%= form.submit "Update#{ ' to Standarized Address' if readonly }" %>
   </div>
 <% end %>
