@@ -1,6 +1,14 @@
+
+<h2>Address</h2>
 <p style="color: green"><%= notice %></p>
 
 <%= render @address %>
+<%= link_to("Keep address as entered", addresses_path, class: 'btn btn-primary')  unless @address.standarized? %>
+
+<% unless @address.standarized? %>
+  <h2>Standarized Address (USPS Service)</h2>
+  <%= render "form", address: @address.standarize %>
+<% end %>
 
 <div>
   <%= link_to "Edit this address", edit_address_path(@address) %> |

@@ -13,40 +13,44 @@
 
   <div>
     <%= form.label :company, style: "display: block" %>
-    <%= form.text_field :company %>
+    <%= form.text_field :company, readonly: @address.persisted? %>
   </div>
 
   <div>
     <%= form.label :address1, style: "display: block" %>
-    <%= form.text_field :address1 %>
+    <%= form.text_field :address1, readonly: @address.persisted? %>
   </div>
 
   <div>
     <%= form.label :address2, style: "display: block" %>
-    <%= form.text_field :address2 %>
+    <%= form.text_field :address2, readonly: @address.persisted? %>
   </div>
 
   <div>
     <%= form.label :city, style: "display: block" %>
-    <%= form.text_field :city %>
+    <%= form.text_field :city, readonly: @address.persisted? %>
   </div>
 
   <div>
     <%= form.label :state, style: "display: block" %>
-    <%= form.text_field :state %>
+    <%= form.text_field :state, readonly: @address.persisted? %>
   </div>
 
   <div>
     <%= form.label :zip5, style: "display: block" %>
-    <%= form.text_field :zip5 %>
+    <%= form.text_field :zip5, readonly: @address.persisted? %>
   </div>
 
   <div>
     <%= form.label :zip4, style: "display: block" %>
-    <%= form.text_field :zip4 %>
+    <%= form.text_field :zip4, readonly: @address.persisted? %>
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.hidden_field :standarized %>
+  </div>
+
+  <div>
+    <%= form.submit 'Update to Standarized Address' %>
   </div>
 <% end %>
