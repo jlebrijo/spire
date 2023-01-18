@@ -17,9 +17,8 @@ class AddressesTest < ApplicationSystemTestCase
     fill_in "Address1", with: @address.address1
     fill_in "Address2", with: @address.address2
     fill_in "City", with: @address.city
-    fill_in "Firm name", with: @address.firm_name
+    fill_in "company name", with: @address.company
     fill_in "State", with: @address.state
-    fill_in "Urbanization", with: @address.urbanization
     fill_in "Zip4", with: @address.zip4
     fill_in "Zip5", with: @address.zip5
     click_on "Create Address"
@@ -35,9 +34,8 @@ class AddressesTest < ApplicationSystemTestCase
     fill_in "Address1", with: @address.address1
     fill_in "Address2", with: @address.address2
     fill_in "City", with: @address.city
-    fill_in "Firm name", with: @address.firm_name
+    fill_in "company name", with: @address.company
     fill_in "State", with: @address.state
-    fill_in "Urbanization", with: @address.urbanization
     fill_in "Zip4", with: @address.zip4
     fill_in "Zip5", with: @address.zip5
     click_on "Update Address"

@@ -15,12 +15,11 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_18_114447) do
   enable_extension "plpgsql"
 
   create_table "addresses", force: :cascade do |t|
-    t.string "firm_name"
+    t.string "company"
     t.string "address1"
     t.string "address2"
     t.string "city"
     t.string "state"
-    t.string "urbanization"
     t.string "zip5"
     t.string "zip4"
     t.datetime "created_at", null: false
